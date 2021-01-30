@@ -3,7 +3,8 @@
     <body>
     <script>
        // user inputs rock, paper, or scissors
-       let playerSelection = "rock";
+       let input = prompt("Choose rock, paper, or scissors.")
+       let playerSelection = input.toLowerCase();
        // computer choice is randomly selected
        const choices = ["rock", "paper", "scissors"];
        function computerPlay(){
@@ -35,7 +36,7 @@
                 return ("Please choose rock, paper, or scissors.");
             }
         }
-       // winner is declared 
+       // winner is declared
         console.log(playRound(playerSelection, computerSelection));
     </script>
     </body>
