@@ -2,6 +2,9 @@
     <title>Rock, Paper, Scissors!</title>
     <body>
     <script>
+        //staring scores for player and computer
+        let playerCount = 0;
+        let computerCount = 0;
        // user inputs rock, paper, or scissors
        let input = prompt("Choose rock, paper, or scissors.")
        let playerSelection = input.toLowerCase();
@@ -13,6 +16,7 @@
        }
        let computerSelection = computerPlay();
        // results are compared
+       function game(){
        function playRound(playerSelection, computerSelection){
             if (playerSelection == "rock" && computerSelection == "paper"){
                 return ("Computer Wins! Paper beats Rock.");
@@ -33,11 +37,19 @@
             } else if (playerSelection == "scissors" && computerSelection == "scissors"){
                 return ("Tie Game!");
             } else {
-                return ("Please choose rock, paper, or scissors.");
+                return prompt("Please choose rock, paper, or scissors.");
             }
         }
+    }
        // winner is declared
         console.log(playRound(playerSelection, computerSelection));
+        if(playerCount > computerCount){
+            return("Player Wins!");
+        } else {
+            return("Computer Wins!");
+        }
+       // game is played five times, best 3 out of 5 wins
+
     </script>
     </body>
 </html>
