@@ -5,6 +5,8 @@
         //starting scores for player and computer
         let playerScore = 0;
         let computerScore = 0;
+        //number of rounds
+        let rounds = 5;
        // user inputs rock, paper, or scissors
        let input = prompt("Choose rock, paper, or scissors.")
        let playerSelection = input.toLowerCase();
@@ -21,25 +23,28 @@
             if (playerSelection == "rock" && computerSelection == "paper"){
                 computerScore++;
                 return ("Computer Wins! Paper beats Rock.");
-                // +1 added to computer's score
             } else if (playerSelection == "rock" && computerSelection == "scissors"){
+                // +1 added to computer's score
                 playerScore++;
                 return ("Player Wins! Rock beats Scissors.");
-                // +1 added to player's score
             } else if (playerSelection == "rock" && computerSelection == "rock"){
                 return ("Tie Game!");
             } else if (playerSelection == "paper" && computerSelection == "rock"){
+                // +1 added to player's score
                 playerScore++;
                 return ("Player Wins! Paper beats Rock.");
             } else if (playerSelection == "paper" && computerSelection == "paper"){
                 return ("Tie Game!");
             } else if (playerSelection == "paper" && computerSelection == "scissors"){
+                // +1 added to computer's score
                 computerScore++;
                 return ("Computer Wins! Scissors beats Paper.");
             } else if (playerSelection == "scissors" && computerSelection == "rock"){
+                // +1 added to computer's score
                 computerScore++;
                 return ("Computer Wins! Rock beats Scissors.");
             } else if (playerSelection == "scissors" && computerSelection == "paper"){
+                // +1 added to player's score
                 playerScore++;
                 return ("Player Wins! Scissors beats Paper.");
             } else if (playerSelection == "scissors" && computerSelection == "scissors"){
