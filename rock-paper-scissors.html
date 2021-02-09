@@ -5,19 +5,18 @@
         //starting scores for player and computer
         let playerScore = 0;
         let computerScore = 0;
-       // user inputs rock, paper, or scissors
-       let input = prompt("Choose rock, paper, or scissors.")
+       // user inputs rock, paper, or scissors, needs to run every round
+       let input = prompt("Choose rock, paper, or scissors.");
        let playerSelection = input.toLowerCase();
        
-       // computer choice is randomly selected
+       // computer choice is randomly selected, needs to run every round
        const choices = ["rock", "paper", "scissors"];
        function computerPlay(){
-        let randomChoice = choices[Math.floor(Math.random()*choices.length)];
-        return randomChoice;
+        return choices[Math.floor(Math.random()*choices.length)];
        }
        let computerSelection = computerPlay();
        // results are compared
-       function playRound(){
+       function playRound(playerSelection, computerSelection){
             if (playerSelection == "rock" && computerSelection == "paper"){
                 computerScore++;
                 return ("Computer Wins! Paper beats Rock.");
@@ -54,14 +53,22 @@
     // game is played five times
     function game(){
         playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        alert("Computer Score: " + computerScore + " Player Score: " + playerScore);
         playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        alert("Computer Score: " + computerScore + " Player Score: " + playerScore);
         playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        alert("Computer Score: " + computerScore + " Player Score: " + playerScore);
         playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        alert("Computer Score: " + computerScore + " Player Score: " + playerScore);
         playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        alert("Computer Score: " + computerScore + " Player Score: " + playerScore);
     }
        // winner is declared
-       console.log(game());
-        alert("Computer Score: " + computerScore + " Player Score: " + playerScore);
 
 
     </script>
