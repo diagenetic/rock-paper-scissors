@@ -53,9 +53,9 @@
                 return ("Player Wins! Scissors beats Paper.");
             } else if (playerSelection == "scissors" && computerSelection == "scissors"){
                 return ("Tie Game!");
-            } //else {
-                //return prompt("Please choose rock, paper, or scissors.");
-            //}
+            } else {
+                alert("Please choose rock, paper, or scissors.");
+            }
         }
     // game is played five times
     function game(){
@@ -80,10 +80,9 @@
        } else if (playerScore > computerScore){
            return ("Player Wins! Great job!");
        } else {
-           return ("Tie Game! Play again!");
+           return ("Tie Game! Play again?");
        }
-    }
-    
+    }   
     console.log(game());
     </script>
     </body>
